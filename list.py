@@ -89,19 +89,23 @@ def orderPoints(points):
 #point=[(1,2),(5,4),(6,2),(8,0),(4,6)]
 #orderPoints(point)
 def dardsLaunching(n):
+    finaleScore = 0
     for i in range (n):
         x = randint(-10,10)
         y = randint(-10,10)
         score = (distance((0,0),(x,y)))
         point = 11 - ceil(score)
-    return point
+        finaleScore = finaleScore + point
+    print(finaleScore)
+    return finaleScore
 
 def dardsGame():
     nbDards = 4
     nbPlayer = 2 #int(input("Choose a number of player (max:5)"))
     for i in range(1,nbPlayer+1):
         dardsLaunching(nbDards)
-        print(point)
+        playerScore=[]
+        
 
 dardsGame()
     
